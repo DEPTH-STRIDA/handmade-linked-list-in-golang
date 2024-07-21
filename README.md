@@ -1,32 +1,51 @@
-# linked-list-on-golang
-Реализация связного списка на golang двумя способами. Implementing a linked list on in two ways. 
+# Реализация связного списка на Golang двумя способами / Implementing a Linked List in Golang in Two Ways
 
-Свя́зный спи́сок — базовая динамическая структура данных в информатике, состоящая из узлов, содержащих данные и ссылки («связки») на следующий и/или предыдущий узел списка. Принципиальным преимуществом перед массивом является структурная гибкость: порядок элементов связного списка может не совпадать с порядком расположения элементов данных в памяти компьютера, а порядок обхода списка всегда явно задаётся его внутренними связями.
-Прежде чем приступить к написанию кода, необходимо определить какими функциями (иногда буду употреблять слово методы) будет обладать список.
+[![RUS](#Русская-версия)](#Русская-версия) | [![ENG](#English-version)](#English-version)
 
-Мой связный список будет обладать:
+---
 
-Удаление/добавление элементов смещает остальные при их наличии.
+## Русская версия
 
-•	Добавление элемента в начало.
+Свя́зный спи́сок — базовая динамическая структура данных в информатике, состоящая из узлов, содержащих данные и ссылки («связки») на следующий и/или предыдущий узел списка. Принципиальным преимуществом перед массивом является структурная гибкость: порядок элементов связного списка может не совпадать с порядком расположения элементов данных в памяти компьютера, а порядок обхода списка всегда явно задаётся его внутренними связями. Прежде чем приступить к написанию кода, необходимо определить, какими функциями (иногда буду употреблять слово методы) будет обладать список.
 
-•	Добавление элемента в конец.
+### Мой связный список будет обладать:
 
-•	Добавление элементу по индексу.
+- Удаление/добавление элементов смещает остальные при их наличии.
+- Добавление элемента в начало.
+- Добавление элемента в конец.
+- Добавление элемента по индексу.
+- Удаление элемента по индексу.
+- Удаление первого элемента.
+- Удаление последнего элемента.
+- Получение длины списка.
+- Переворачивание списка (реверсирование).
+- Получение элемента.
 
-•	Удаление элемента по индексу.
+Связный список реализую двумя способами:
 
-•	Удаление первого элемента.
+1. **Реализация поверх слайса** (расширяемый массив). Это не совсем честно, но быстро и просто в создании. Вдобавок, мы сможем использовать уже существующие функции для создания новых или сами по себе.
+2. **Реализация на основе новых типов**. Я создам два типа: «элемент», содержащий ссылку на следующий элемент и значение, и «связный список», который хранит ссылку на первый элемент. С таким способом придется реализовывать методы с нуля.
 
-•	Удаление последнего элемента.
+---
 
-•	Получение длины списка.
+## English Version
 
-•	Переворачивание списка (реверсирование)
+A linked list is a basic dynamic data structure in computer science, consisting of nodes containing data and links ("links") to the next and/or previous node in the list. The principal advantage over an array is structural flexibility: the order of elements in a linked list may not match the order of data elements in the computer's memory, and the traversal order of the list is always explicitly defined by its internal links. Before starting to write code, it is necessary to determine what functions (sometimes I will use the word methods) the list will have.
 
-•	Получение элемента
+### My linked list will have:
 
-Связный список реализую двумя способами. 
+- Deleting/adding elements shifts the others if present.
+- Adding an element to the beginning.
+- Adding an element to the end.
+- Adding an element by index.
+- Deleting an element by index.
+- Deleting the first element.
+- Deleting the last element.
+- Getting the length of the list.
+- Reversing the list.
+- Getting an element.
 
-Первый, реализация поверх слайса (расширяемый массив). Это не совсем честно, но быстро и просто в создании. Вдобавок мы сможем использовать уже существующие функции для создания новых или сами по себе.
-Второй, реализация на основе новых типов. Я создам два типа: «элемент», содержащий ссылку на следующий элемент и значение, «связный список» хранить ссылку на первый элемент. С таким способом придется реализовывать методы с нуля.
+I will implement the linked list in two ways:
+
+1. **Implementation on top of a slice** (dynamic array). This is not entirely fair, but it is quick and easy to create. Additionally, we can use existing functions to create new ones or use them on their own.
+2. **Implementation based on new types**. I will create two types: "element", containing a reference to the next element and value, and "linked list", which stores a reference to the first element. With this method, you will have to implement the methods from scratch.
