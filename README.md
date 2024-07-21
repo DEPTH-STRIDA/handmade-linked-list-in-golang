@@ -4,7 +4,7 @@
 
 > **Note:** This implementation of the linked list is made for educational purposes. The linked list is already implemented in Go.
 
-[![RUS](https://img.shields.io/badge/lang-RUS-blue)](#Русская-версия) | [![ENG](https://img.shields.io/badge/lang-ENG-red)](#English-Version)
+[![RUS](https://img.shields.io/badge/lang-RUS-blue)](#русская-версия) | [![ENG](https://img.shields.io/badge/lang-ENG-red)](#english-version)
 
 ---
 
